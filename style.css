@@ -1,0 +1,133 @@
+/* Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #f4f7f6;
+    color: #333;
+    padding: 40px 20px;
+}
+
+.tour-section {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 2.5rem;
+    color: #2c3e50;
+}
+
+/* Tour Grid Container */
+.tour-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+/* Tour Card Base */
+.tour-card {
+    background: #fff;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover transition */
+    display: flex;
+    flex-direction: column;
+}
+
+/* --- HOVER EFFECT #1: Card Lifts and Shadow Deepens --- */
+.tour-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+}
+
+/* Image Container & Positioning for Badge */
+.tour-img-container {
+    position: relative;
+    overflow: hidden;
+    height: 220px;
+}
+
+.tour-img-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease; /* Smooth zoom transition */
+}
+
+/* --- HOVER EFFECT #2: Image Zoom --- */
+.tour-card:hover .tour-img-container img {
+    transform: scale(1.1);
+}
+
+/* --- PRICING BADGES --- */
+.price-badge {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    background-color: #1abc9c;
+    color: #fff;
+    padding: 8px 15px;
+    font-weight: bold;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+/* Optional special badge color */
+.price-badge.hot-deal {
+    background-color: #e74c3c;
+}
+
+/* Tour Card Content */
+.tour-content {
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.tour-content h3 {
+    margin-bottom: 5px;
+    color: #2c3e50;
+    font-size: 1.4rem;
+}
+
+.tour-content p {
+    color: #7f8c8d;
+    font-size: 0.9rem;
+    margin-bottom: 15px;
+}
+
+.tour-content .tour-desc {
+    color: #555;
+    font-size: 0.95rem;
+    line-height: 1.5;
+    margin-bottom: 20px;
+    flex-grow: 1; /* Pushes button to the bottom so they align */
+}
+
+/* Button Styling & Hover */
+.tour-btn {
+    background-color: #34495e;
+    color: white;
+    border: none;
+    padding: 12px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: 600;
+    transition: background-color 0.2s ease;
+}
+
+/* --- HOVER EFFECT #3: Button Color Change --- */
+.tour-btn:hover {
+    background-color: #1abc9c;
+}
