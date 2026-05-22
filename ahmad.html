@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Travel Agency Landing Page</title>
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
+
+  <style>
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+      font-family: Verdana, Geneva, Tahoma, sans-serif;
+    }
+
+    body{
+      background: #f5fff5;;
+      color:#333;
+      line-height:1.6;
+    }
+
+    
+    .about{
+      padding:70px 10%;
+      background: violet;
+      text-align:center;
+    }
+
+    .about h2{
+      font-size:40px;
+      margin-bottom:20px;
+      color: gold;
+    }
+
+    .about p{
+      max-width:800px;
+      margin:auto;
+      font-size:18px;
+      color:#555;
+    }
+
+    
+    .features{
+      padding:70px 10%;
+      background: green;
+    }
+
+    .features-title{
+      text-align:center;
+      margin-bottom:50px;
+    }
+
+    .features-title h2{
+      font-size:38px;
+      color:#0d6efd;
+      
+    }
+
+    .card-container{
+      display:grid;
+      grid-template-columns:repeat(3,1fr);
+      gap:25px;
+      
+    }
+
+    .card{
+      background: linear-gradient(to right,  orange, red, gold );
+      padding:35px 25px;
+      border-radius:15px;
+      text-align:center;
+      transition:0.3s;
+      box-shadow:0 5px 15px blue;
+    }
+
+    .card:hover{
+      transform:translateY(-10px);
+    }
+
+    .card i{
+      font-size:45px;
+      color:#0d6efd;
+      margin-bottom:20px;
+    }
+
+    .card h3{
+      margin-bottom:15px;
+      font-size:24px;
+    }
+
+    .card p{
+      color: maroon;
+      font-size:16px;
+    }
+
+    
+    @media(max-width:900px){
+      .card-container{
+        grid-template-columns:repeat(2,1fr);
+      }
+    }
+
+    @media(max-width:600px){
+
+      .about h2,
+      .features-title h2{
+        font-size:30px;
+      }
+
+      .about p{
+        font-size:16px;
+      }
+
+      .card-container{
+        grid-template-columns:1fr;
+      }
+
+      .card{
+        padding:30px 20px;
+      }
+    }
+
+  </style>
+</head>
+<body>
+
+  <!-- ABOUT SECTION -->
+  <section class="about">
+    <h2>About Us</h2>
+    <p>
+      We are a trusted travel agency dedicated to helping people
+      explore beautiful destinations around the world. From affordable
+      vacations to luxury adventures, we provide unforgettable travel
+      experiences with comfort, safety, and excellent customer service.
+    </p>
+  </section>
+
+  <!-- WHY CHOOSE US -->
+  <section class="features">
+
+    <div class="features-title">
+      <h2>Why Choose Us</h2>
+    </div>
+
+    <div class="card-container">
+
+      <div class="card">
+        <i class="fa-solid fa-plane"></i>
+        <h3>Easy Booking</h3>
+        <p>
+          Book flights, hotels, and tours quickly with our simple
+          and secure booking process.
+        </p>
+      </div>
+
+      <div class="card">
+        <i class="fa-solid fa-earth-africa"></i>
+        <h3>Best Destinations</h3>
+        <p>
+          Explore top tourist attractions and beautiful destinations
+          around the world.
+        </p>
+      </div>
+
+      <div class="card">
+        <i class="fa-solid fa-headset"></i>
+        <h3>24/7 Support</h3>
+        <p>
+          Our support team is available anytime to help make your
+          travel experience stress-free.
+        </p>
+      </div>
+
+    </div>
+
+  </section>
+
+</body>
+</html>
